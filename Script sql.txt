@@ -1,0 +1,25 @@
+-- Crear tabla "Cuenta"
+CREATE TABLE Cuenta (
+    Id SERIAL PRIMARY KEY,
+    IdCuenta VARCHAR(50),
+    NombreCuenta VARCHAR(50),
+    NumeroCuenta VARCHAR(50),
+    Saldo NUMERIC(10, 2),
+    LimiteSaldo NUMERIC(10, 2),
+    LimiteTransferencia NUMERIC(10, 2),
+    Estado VARCHAR(20)
+);
+
+-- Crear tabla "Personas"
+CREATE TABLE Persona (
+    Id SERIAL PRIMARY KEY,
+    Nombre VARCHAR(50),
+    Apellido VARCHAR(50),
+    TipoDocumento VARCHAR(50),
+    Documento VARCHAR(50),
+    Direccion VARCHAR(100),
+    Telefono VARCHAR(20),
+    Mail VARCHAR(100),
+    Estado INTEGER REFERENCES Cuenta(Id)
+);
+

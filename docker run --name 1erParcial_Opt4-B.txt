@@ -1,0 +1,1 @@
+ docker run --name 2doParcial_Opt4-Blas- -e POSTGRES_USER=blas -e POSTGRES_PASSWORD=a.123456 -e POSTGRES_DB=BD2doPARCIALOP4 -p 5437:5432 -d postgres
